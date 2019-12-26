@@ -5,6 +5,7 @@
 	Á¶°Ç :
 		Input) N ( 1 <= N <= 1,000,000)
 ----------------------------------------------------*/
+#pragma warning(disable:4996)
 
 #include <iostream>
 
@@ -12,11 +13,8 @@ using namespace std;
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie(0);
-
 	int N;
-	cin >> N;
+	scanf("%d", &N);
 	int temp;
 	int cnt = 1;
 	int cmp = 10;
@@ -31,7 +29,7 @@ int main()
 		}
 		answer += cnt;
 	}
-	cout << answer << '\n';
+	printf("%d\n", answer);
 
 	return 0;
 }

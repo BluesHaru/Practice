@@ -1,11 +1,12 @@
 /*---------------------------------------------------
 	3085 사탕 게임
 	BF
-	문제정보 : 사탕을 가장 많이 먹을 수 있을 때 갯수를 찾아라.
+	문제정보 :	사탕을 가장 많이 먹을 수 있을 때 갯수를 찾아라.
 	조건 :
 		Input)	보드의 크기 N (3 <= N <= 50)
 				사탕 종류(C:빨강, P:파랑, Z:초록, Y:노랑)
 ----------------------------------------------------*/
+#pragma warning(disable:4996)
 
 #include <iostream>
 #include <string>
@@ -18,7 +19,6 @@ constexpr int MAX = 50;
 
 int N;
 string board[MAX];
-
 
 int GetCandy()
 {
@@ -61,15 +61,12 @@ int GetCandy()
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie(0);
-
 	int answer = 0;
-	cin >> N;
+	scanf("%d", &N);
 
 	// 보드 입력
 	for (int i = 0; i < N; ++i)
-		cin >> board[i];
+		scanf("%d", &board[i]);
 
 	int cnt;
 	for (int r = 0; r < N; ++r)
@@ -86,8 +83,7 @@ int main()
 			swap(board[c][r], board[c + 1][r]);
 		}
 	}
-
-	cout << answer << '\n';
+	printf("%d\n", answer);
 
 	return 0;
 }

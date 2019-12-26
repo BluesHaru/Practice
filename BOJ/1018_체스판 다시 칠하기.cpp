@@ -7,9 +7,8 @@
 				둘째 줄부터 N개의 줄에는 보드의 각 행의 상태가 주어진다. B는 검은색이며, W는 흰색이다.
 		Output)	첫째 줄에 지민이가 다시 칠해야 하는 정사각형 개수의 최솟값을 출력한다.
 ----------------------------------------------------*/
-
-//#include <bits/stdc++.h> << 제출용
 #pragma warning(disable:4996)
+
 #include <iostream>
 using namespace std;
 

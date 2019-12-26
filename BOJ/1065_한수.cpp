@@ -1,11 +1,10 @@
 /*---------------------------------------------------
 	1065 한수
-	문제유형
-	문제정보 : N보다 작거나 같은 한수의 개수를 출력하라
+	BF, 구현
+	문제정보 :	N보다 작거나 같은 한수의 개수를 출력하라
 	조건 :
 		Input)  1,000보다 작거나 같은 자연수 N
 ----------------------------------------------------*/
-
 #include <iostream>
 
 using namespace std;
@@ -39,21 +38,18 @@ bool Hansoo(int num)
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie(0);
-
 	int N;
-	cin >> N;
+	scanf("%d", &N);
 	int ans = 99;
-	if (N < 100)
-		ans = N;
+	
+	if (N < 100) ans = N;
 	else
 	{
 		for (int i = 100; i <= N; ++i)
 			if (Hansoo(i))
 				++ans;
 	}
-	cout << ans << '\n';
+	printf("%d\n", ans);
 
 	return 0;
 }

@@ -8,6 +8,8 @@
 				합이 M을 넘지 않는 카드 3장을 찾을 수 있는 경우만 입력으로 주어진다.
 		Output)	첫째 줄에 M을 넘지 않으면서 M에 최대한 가까운 카드 3장의 합을 출력한다.
 ----------------------------------------------------*/
+#pragma warning(disable:4996)
+
 #include <iostream>
 
 using namespace std;
@@ -17,11 +19,11 @@ int cards[101];
 int main()
 {
 	int N, M;
-	scanf_s("%d %d", &N, &M);
+	scanf("%d %d", &N, &M);
 	
 	// 카드 수 입력
 	for (int i = 0; i < N; ++i)
-		scanf_s("%d", &cards[i]);
+		scanf("%d", &cards[i]);
 
 	int result = 0;
 
